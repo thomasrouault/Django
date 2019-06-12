@@ -10,3 +10,8 @@ def cartes_view(request):
 def accueil_view(request):
     utilisateur = request.user
     return render(request, 'accueil.html', {})
+
+
+def purBeurre_view(request):
+    utilisateur = request.user
+    return render(request, 'purBeurre.html', {})

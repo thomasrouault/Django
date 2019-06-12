@@ -1,4 +1,16 @@
-{% extends 'base.html' %}
+{% extends 'components/base.html' %}
 {% block content %}
-    <h1>Cartes</h1>
+    <h1>Cartes HearthStone</h1>
+    <ol>
+        {% for carte in CartesHearthStone %}
+            {% if  carte.prix is not None %}
+                {% if  carte.prix > 200 %}
+                    <p style="color: red">
+                        {% else %}
+                    <p style="color: black">
+                {% endif %}
+            {{ carte }}
+            {% endif %}
+        {% endfor %}
+    </ol>
 {% endblock %}

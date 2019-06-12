@@ -1,0 +1,12 @@
+{% extends 'components/base.html' %}
+{% block content %}
+<h1>Cartes Personnes</h1>
+     <ol>
+        {% for carte in CartesPersonnes %}
+            {% if  carte.couleur is not None %}
+            {{ carte.nom }} - {{ carte.couleur }} - {{ carte.dateToBD }}
+                <br>
+            {% endif %}
+        {% endfor %}
+    </ol>
+{% endblock %}

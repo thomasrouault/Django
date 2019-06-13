@@ -6,5 +6,5 @@ from purBeurre.views import article_view
 urlpatterns = [
 
     path('', article_view, name=""),
-    path('1/', article_view, name="Article 1"),
+    path('<int:annee>/<int:mois>/<int:jour>', article_view, name="Article 1"),
 ]

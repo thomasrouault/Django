@@ -1,6 +1,6 @@
 <div class="wrapper" style="display: flex;width: 90%;">
     <nav id="sidebar" style="width: 30%; margin-top: 2%; margin-left: 10%;">
-        {% for article in ArticlesTitre %}
+        {% for article in MenuArticleTitre %}
             <a href="#">
                 <button type="button" class="btn btn-default"
                         style="width: 50%;padding: 10px;">{{ article.titre }}</button>
@@ -8,8 +8,13 @@
         {% endfor %}
     </nav>
     <div id="content" style="width: 90%;">
-        <h1>{{ ArticlesContenu.titre }}</h1>
+    <a href="{% url 'news-year-archive' 2012 %}">2012 Archive</a>
+        <!--<h1>{{ ArticlesContenu.titre }}</h1>
         <p>{{ ArticlesContenu.contenu }}</p>
         <b>{{ ArticlesContenu.auteur.pseudo }}</b>
+        -->
+        {% for article in Articles %}
+            {{ article.titre }}<br>
+        {% endfor %}
     </div>
 </div>
